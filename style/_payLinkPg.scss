@@ -1,0 +1,229 @@
+#payPage {
+  width: 100%;
+  height: 100vh;
+  //background: url("../img/globe-bg.jpg");
+  background: url("../img/globe-bg.jpg");
+  //background: url("img/logo_hd.jpg")
+  background-size: cover;
+
+  .payPageWrapper {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 53px 0 53px 0;
+
+
+    .payPageTitle {
+      width: 100%;
+
+
+      h3 {
+        font-family: OpenSans-ExtraBold;
+        text-transform: uppercase;
+        font-size: 60px;
+        letter-spacing: 1.2px;
+        color: white;
+      }
+
+      h4 {
+        font-family: OpenSans-ExtraBold;
+        text-transform: uppercase;
+        font-size: 34px;
+        letter-spacing: 1.2px;
+        color: white;
+      }
+
+    }
+
+    .btnWrapper {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 50px;
+
+      .aprivatYas {
+        .privatYas {
+          width: 350px;
+          height: 380px;
+          background: rgba(0, 0, 0, 0.7);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+
+          .privatYasImgWarpper {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+
+            img {
+              width: 200px;
+
+            }
+          }
+
+
+          p {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 34px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          div {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .aprivatYas:hover {
+        .privatYas {
+          background: rgba(0, 0, 0, 1);
+
+          .privatYasImgWarpper {
+            img {
+
+              width: 250px;
+            }
+
+
+          }
+
+
+        }
+      }
+
+      .aprivatBog {
+        .privatBog {
+          background: rgba(0, 0, 0, 0.7);
+          width: 350px;
+          height: 380px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+
+          .privatBogImgWarpper {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+
+            img {
+              width: 200px;
+
+            }
+          }
+
+
+          p {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 34px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          div {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .aprivatBog:hover {
+        .privatBog {
+          background: rgba(0, 0, 0, 1);
+
+          .privatBogImgWarpper {
+            img {
+              width: 250px;
+            }
+          }
+
+
+        }
+      }
+
+      .aeasyPay {
+        .easyPay {
+          background: rgba(0, 0, 0, 0.7);
+          width: 350px;
+          height: 380px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+
+          .easyPayImg {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+
+            img {
+              width: 200px;
+
+            }
+
+          }
+
+          p {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 34px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          div {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+
+
+      }
+
+      .aeasyPay:hover {
+        .easyPay {
+          background: rgba(0, 0, 0, 1);
+
+          .easyPayImg {
+            img {
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
