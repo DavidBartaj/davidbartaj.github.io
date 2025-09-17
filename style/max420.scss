@@ -1,0 +1,512 @@
+@media screen and (max-width: 421px) {
+
+  //header
+  #header {
+    min-width: 320px;
+    height: 100%;
+
+  }
+  .logo {
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+  #top {
+    width: 30px;
+    left: 15px;
+    bottom: 15px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+  //nav
+  //nav {
+  //  background: black;
+  //  height: 100%;
+  //
+  //}
+  //.navWrap {
+  //  width: 100%;
+  //  flex-direction: column;
+  //  align-items: center;
+  //
+  //  li {
+  //    width: 99%;
+  //    border: 1px solid rgba(208, 208, 208, 0.54);
+  //    border-radius: 50px;
+  //    justify-content: center;
+  //    background: rgb(33, 33, 33);
+  //    padding: 0;
+  //
+  //    a {
+  //      font-size: 15px;
+  //      padding: 17px 0;
+  //      width: 100%;
+  //    }
+  //  }
+  //}
+
+
+  //advantages
+  #advantages {
+    min-width: 320px;
+    height: 100%;
+  }
+
+  .advantagesWrap {
+    width: 320px;
+
+    h3 {
+
+      font-size: 35px;
+
+    }
+
+  }
+
+  .fourDivWrapper {
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      width: 100%;
+      margin: 0 0 30px 0;
+
+      p {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+
+
+  //location
+  #location {
+    min-width: 320px;
+    min-height: 0;
+  }
+
+  .locationContentWrapper {
+    width: 320px;
+
+  }
+
+  .locationText {
+    margin: 0;
+
+    p {
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .smallText {
+      font-size: 15px;
+    }
+
+    .bigText {
+      font-size: 30px;
+    }
+
+  }
+
+  .villagesTextWrapper {
+    height: 300px;
+    margin: 30px 0 0 0;
+
+    div {
+      width: 100%;
+
+      img {
+        width: 20px;
+        height: 9px;
+      }
+
+      p {
+
+        font-size: 18px;
+        margin: 0 0 0 10px;
+
+      }
+
+      span {
+        font-size: 13px;
+        margin: 0 0 0 10px;
+      }
+
+    }
+
+  }
+
+  #map {
+    display: none;
+  }
+
+
+  //modal
+  .mainModalContainer {
+    min-width: 320px;
+    height: 100%;
+  }
+
+  .tariffsWrapper {
+    width: 320px;
+  }
+
+  .tariffsTitle {
+    text-transform: uppercase;
+    font-family: OpenSans-ExtraBold;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .menuNameTariffs {
+
+    div {
+
+      span {
+        height: 35px;
+        font-size: 13px;
+      }
+
+      p {
+        width: 87%;
+        font-size: 13px;
+      }
+    }
+  }
+  .menuNameTariffs2 {
+
+    div {
+      span {
+        height: 35px;
+        font-size: 13px;
+      }
+
+      p {
+        color: white;
+        font-size: 13px;
+
+      }
+    }
+  }
+
+
+  //documents
+  #documents {
+    min-width: 320px;
+    height: 100%;
+  }
+
+  .sectionNameDocs {
+
+    display: none;
+  }
+  .locationName {
+    width: 20%;
+
+    p {
+      text-align: center;
+      font-family: OpenSans-ExtraBold;
+
+    }
+  }
+  .docsName {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+
+    p {
+      width: 100%;
+      text-align: center;
+      font-family: OpenSans-ExtraBold;
+    }
+  }
+
+  .documentsWrapper {
+    width: 320px;
+
+    h2 {
+      font-size: 30px;
+    }
+
+  }
+
+  .firstDocksWrapper, .secondDocksWrapper, .thirdDocksWrapper {
+    flex-direction: column;
+    height: 100%;
+
+    p {
+      width: 95%;
+      margin: 0 0 30px 0;
+    }
+
+    .docs {
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        overflow: hidden;
+        width: 219px;
+        height: 68px;
+        position: relative;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px;
+
+        a {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 60px;
+            position: absolute;
+            top: -134px;
+          }
+        }
+
+      }
+    }
+  }
+
+  //footer
+  #contacts {
+    min-width: 320px;
+    height: 100%;
+    background-size: auto;
+    background-position: 0;
+  }
+  .footerWrapper {
+    width: 320px;
+    flex-direction: column;
+
+    div {
+      width: 100%;
+    }
+  }
+  .footerContentWrap1 {
+    width: 100%;
+
+    p {
+      color: black;
+    }
+  }
+  .footerContentWrap2 {
+    width: 100%;
+
+    a {
+
+      img {
+        width: 100%;
+      }
+
+    }
+  }
+  .footerContentWrap3 {
+    width: 100%;
+
+    a {
+      justify-content: center;
+      margin: 0;
+    }
+  }
+  //Модалказ новими реквізитами
+
+  .modalBankInfo {
+    #closeBankingModal {
+      width: 40px;
+      height: 40px;
+      top: 5px;
+      right: 16px;
+    }
+
+    .textSorry {
+      font-size: 11px;
+    }
+
+    .title {
+      font-size: 17px;
+    }
+
+    .newBankInfoWrapper {
+      .newBankInfo {
+        font-size: 15px;
+
+      }
+    }
+  }
+  .sorryLogo {
+    width: 200px;
+    height: 57px;
+  }
+
+  //Сторінка з тарифами IPTV
+  .containerCtvWrapper {
+    min-width: 320px;
+    min-height: 100%;
+  }
+  .containerCtv {
+    width: 320px;
+    flex-direction: column;
+  }
+
+  .contentCtvWrappers {
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+
+  .ctvPriceTitleWrapper {
+    margin: 0 10px 0 10px;
+  }
+
+  .contentCTV {
+    .channels {
+      width: 40%;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  //Модалка з новинами
+  .modalNewsInfo {
+    width: 95%;
+
+    #closeNewsModal {
+      width: 40px;
+      height: 40px;
+      top: 1%;
+      right: 5%;
+    }
+
+    .textSorry {
+      font-size: 11px;
+    }
+
+    .title {
+      font-size: 17px;
+    }
+
+
+    .newsText {
+      max-width: 360px;
+      transform: translate(-50%, -50%);
+      margin-left: 50%;
+      margin-top: 145px;
+
+      p {
+        max-width: 360px;
+        padding: 10px;
+        line-height: 1.5;
+        font-family: OpenSans-ExtraBold;
+
+      }
+
+
+    }
+
+    .sorryLogo {
+      width: 200px;
+      height: 57px;
+    }
+
+  }
+  //Кнопка оплати послуг
+  .payButtWrapper {
+
+    a {
+      height: 75px;
+      text-transform: uppercase;
+      text-align: center;
+
+
+    }
+
+  }
+  .payRedButtWrapper {
+    a {
+      width: 85%;
+      margin: 0 0 43px 0;
+      text-align: center;
+
+
+    }
+
+  }
+
+  //Кнопки оплати в приват чи ізіпей
+  #payPage {
+    min-width: 320px;
+    height: 100%;
+
+    .payPageWrapper {
+      width: 320px;
+      padding: 20px;
+      margin: 0 auto;
+
+      .btnWrapper {
+        flex-direction: column;
+        height: 100%;
+
+        .privatYas {
+          margin-bottom: 20px;
+          img{
+            width: 150px;
+          }
+        }
+
+        .easyPay {
+          margin-bottom: 20px;
+          img{
+            width: 150px;
+          }
+        }
+        
+      }
+    }
+  }
+
+  //Адреси терміналів
+  .terminalWrapper {
+
+
+    h3 {
+      font-size: 20px;
+
+    }
+  }
+
+  .terminalAddressWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      width: 59%;
+
+      h6 {
+        padding: 10px 0;
+      }
+
+      p {
+
+        padding: 7px 5px;
+      }
+
+      a {
+        padding: 4px 2px;
+
+      }
+    }
+  }
+}
+

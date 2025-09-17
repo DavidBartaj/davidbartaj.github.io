@@ -1,0 +1,337 @@
+@media screen and (max-width: 421px) {
+  #header {
+    min-width: 320px;
+    height: 100%;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+  .logo img {
+    width: 100%;
+  }
+  #top {
+    width: 30px;
+    left: 15px;
+    bottom: 15px;
+  }
+  #top img {
+    width: 100%;
+  }
+  #advantages {
+    min-width: 320px;
+    height: 100%;
+  }
+  .advantagesWrap {
+    width: 320px;
+  }
+  .advantagesWrap h3 {
+    font-size: 35px;
+  }
+  .fourDivWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .fourDivWrapper div {
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+  .fourDivWrapper div p {
+    font-size: 15px;
+    margin: 10px 0 0 0;
+  }
+  #location {
+    min-width: 320px;
+    min-height: 0;
+  }
+  .locationContentWrapper {
+    width: 320px;
+  }
+  .locationText {
+    margin: 0;
+  }
+  .locationText p {
+    text-transform: uppercase;
+    color: white;
+  }
+  .locationText .smallText {
+    font-size: 15px;
+  }
+  .locationText .bigText {
+    font-size: 30px;
+  }
+  .villagesTextWrapper {
+    height: 300px;
+    margin: 30px 0 0 0;
+  }
+  .villagesTextWrapper div {
+    width: 100%;
+  }
+  .villagesTextWrapper div img {
+    width: 20px;
+    height: 9px;
+  }
+  .villagesTextWrapper div p {
+    font-size: 18px;
+    margin: 0 0 0 10px;
+  }
+  .villagesTextWrapper div span {
+    font-size: 13px;
+    margin: 0 0 0 10px;
+  }
+  #map {
+    display: none;
+  }
+  .mainModalContainer {
+    min-width: 320px;
+    height: 100%;
+  }
+  .tariffsWrapper {
+    width: 320px;
+  }
+  .tariffsTitle {
+    text-transform: uppercase;
+    font-family: OpenSans-ExtraBold;
+    font-size: 26px;
+    text-align: center;
+  }
+  .menuNameTariffs div span {
+    height: 35px;
+    font-size: 13px;
+  }
+  .menuNameTariffs div p {
+    width: 87%;
+    font-size: 13px;
+  }
+  .menuNameTariffs2 div span {
+    height: 35px;
+    font-size: 13px;
+  }
+  .menuNameTariffs2 div p {
+    color: white;
+    font-size: 13px;
+  }
+  #documents {
+    min-width: 320px;
+    height: 100%;
+  }
+  .sectionNameDocs {
+    display: none;
+  }
+  .locationName {
+    width: 20%;
+  }
+  .locationName p {
+    text-align: center;
+    font-family: OpenSans-ExtraBold;
+  }
+  .docsName {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+  }
+  .docsName p {
+    width: 100%;
+    text-align: center;
+    font-family: OpenSans-ExtraBold;
+  }
+  .documentsWrapper {
+    width: 320px;
+  }
+  .documentsWrapper h2 {
+    font-size: 30px;
+  }
+  .firstDocksWrapper, .secondDocksWrapper, .thirdDocksWrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+  .firstDocksWrapper p, .secondDocksWrapper p, .thirdDocksWrapper p {
+    width: 95%;
+    margin: 0 0 30px 0;
+  }
+  .firstDocksWrapper .docs, .secondDocksWrapper .docs, .thirdDocksWrapper .docs {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .firstDocksWrapper .docs div, .secondDocksWrapper .docs div, .thirdDocksWrapper .docs div {
+    overflow: hidden;
+    width: 219px;
+    height: 68px;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .firstDocksWrapper .docs div a, .secondDocksWrapper .docs div a, .thirdDocksWrapper .docs div a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .firstDocksWrapper .docs div a img, .secondDocksWrapper .docs div a img, .thirdDocksWrapper .docs div a img {
+    width: 60px;
+    position: absolute;
+    top: -134px;
+  }
+  #contacts {
+    min-width: 320px;
+    height: 100%;
+    background-size: auto;
+    background-position: 0;
+  }
+  .footerWrapper {
+    width: 320px;
+    flex-direction: column;
+  }
+  .footerWrapper div {
+    width: 100%;
+  }
+  .footerContentWrap1 {
+    width: 100%;
+  }
+  .footerContentWrap1 p {
+    color: black;
+  }
+  .footerContentWrap2 {
+    width: 100%;
+  }
+  .footerContentWrap2 a img {
+    width: 100%;
+  }
+  .footerContentWrap3 {
+    width: 100%;
+  }
+  .footerContentWrap3 a {
+    justify-content: center;
+    margin: 0;
+  }
+  .modalBankInfo #closeBankingModal {
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    right: 16px;
+  }
+  .modalBankInfo .textSorry {
+    font-size: 11px;
+  }
+  .modalBankInfo .title {
+    font-size: 17px;
+  }
+  .modalBankInfo .newBankInfoWrapper .newBankInfo {
+    font-size: 15px;
+  }
+  .sorryLogo {
+    width: 200px;
+    height: 57px;
+  }
+  .containerCtvWrapper {
+    min-width: 320px;
+    min-height: 100%;
+  }
+  .containerCtv {
+    width: 320px;
+    flex-direction: column;
+  }
+  .contentCtvWrappers {
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+  .ctvPriceTitleWrapper {
+    margin: 0 10px 0 10px;
+  }
+  .contentCTV .channels {
+    width: 40%;
+  }
+  .contentCTV .channels img {
+    width: 30px;
+  }
+  .modalNewsInfo {
+    width: 95%;
+  }
+  .modalNewsInfo #closeNewsModal {
+    width: 40px;
+    height: 40px;
+    top: 1%;
+    right: 5%;
+  }
+  .modalNewsInfo .textSorry {
+    font-size: 11px;
+  }
+  .modalNewsInfo .title {
+    font-size: 17px;
+  }
+  .modalNewsInfo .newsText {
+    max-width: 360px;
+    transform: translate(-50%, -50%);
+    margin-left: 50%;
+    margin-top: 145px;
+  }
+  .modalNewsInfo .newsText p {
+    max-width: 360px;
+    padding: 10px;
+    line-height: 1.5;
+    font-family: OpenSans-ExtraBold;
+  }
+  .modalNewsInfo .sorryLogo {
+    width: 200px;
+    height: 57px;
+  }
+  .payButtWrapper a {
+    height: 75px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .payRedButtWrapper a {
+    width: 85%;
+    margin: 0 0 43px 0;
+    text-align: center;
+  }
+  #payPage {
+    min-width: 320px;
+    height: 100%;
+  }
+  #payPage .payPageWrapper {
+    width: 320px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  #payPage .payPageWrapper .btnWrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+  #payPage .payPageWrapper .btnWrapper .privatYas {
+    margin-bottom: 20px;
+  }
+  #payPage .payPageWrapper .btnWrapper .privatYas img {
+    width: 150px;
+  }
+  #payPage .payPageWrapper .btnWrapper .easyPay {
+    margin-bottom: 20px;
+  }
+  #payPage .payPageWrapper .btnWrapper .easyPay img {
+    width: 150px;
+  }
+  .terminalWrapper h3 {
+    font-size: 20px;
+  }
+  .terminalAddressWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .terminalAddressWrapper div {
+    width: 59%;
+  }
+  .terminalAddressWrapper div h6 {
+    padding: 10px 0;
+  }
+  .terminalAddressWrapper div p {
+    padding: 7px 5px;
+  }
+  .terminalAddressWrapper div a {
+    padding: 4px 2px;
+  }
+}
+
+/*# sourceMappingURL=max420.css.map */

@@ -1,0 +1,120 @@
+.containerCtvWrapper {
+  width: 100%;
+  min-height: 75vh;
+
+}
+
+.containerCtv {
+  width: 1150px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contentCtvWrappers {
+  width: 29%;
+  height: 100%;
+  overflow-y: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 20px 0 20px 0;
+  border-radius: 30px;
+
+
+  .ctvPriceTitleWrapper {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 30px;
+
+    h3 {
+      font-family: OpenSans-Regular;
+      font-weight: 700;
+      text-align: center;
+      padding: 0 0 15px 0;
+      color: #E2E2E2;
+    }
+
+    .ctvPriceText {
+      text-align: center;
+      font-family: OpenSans-Regular;
+      font-weight: 700;
+      padding: 10px 0 0 0;
+      color: #E2E2E2;
+    }
+
+    img {
+      width: 30px;
+      margin: 0 0 0 10px;
+    }
+
+    img:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+.contentCTV1, .contentCTV2, .contentCTV3 {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .channels {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    padding: 10px;
+
+    img {
+      width: 60px;
+
+    }
+
+    p {
+      font-family: OpenSans-Regular;
+      text-align: center;
+      color: #E2E2E2;;
+    }
+  }
+}
+
+
+.scrollDown1, .scrollDown2, .scrollDown3 {
+  animation-name: scrollUpRotate;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.scrollDown1anim, .scrollDown2anim, .scrollDown3anim {
+  animation-name: scrollDownRotate;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes scrollDownRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes scrollUpRotate {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+

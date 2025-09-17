@@ -1,0 +1,117 @@
+header {
+  min-width: 320px;
+
+ // background: black;
+}
+
+.phoneHeaderLogo {
+  width: 100%;
+}
+
+.phoneHeaderNavBarFullScreen {
+  width: 100%;
+  height: 50px;
+  background: rgba(202, 206, 206, 0.29);
+}
+
+.phoneHeaderNavBarWrap {
+  width: 320px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.phoneMenuButt {
+  width: 37px;
+  height: 42px;
+}
+
+.callButt {
+  display: flex;
+
+  img {
+    height: 40px;
+  }
+
+  a {
+    color: white;
+    font-family: OpenSans-ExtraBold;
+    font-size: 22px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+.navListPhoneHeaderFullBackground {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 102;
+
+
+}
+
+.navListPhoneHeader {
+
+  position: absolute;
+  width: 100%;
+  margin: 2px 0 0 0;
+  z-index: 103;
+  background: #3c3c3c;
+
+
+  nav {
+    background: #3c3c3c;
+
+    height: 100%;
+
+  }
+
+  .navWrap {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      width: 99%;
+
+      border-radius: 50px;
+      justify-content: center;
+
+      padding: 0;
+
+      a {
+        font-size: 15px;
+        padding: 17px 0;
+        width: 100%;
+
+      }
+    }
+  }
+}
+
+.socialLinkHeaderPhone {
+  display: none;
+  width: 260px;
+  justify-content: space-around;
+  margin: 20px auto;
+
+  a {
+    margin: 0 10px 0 10px;
+
+
+  }
+}
+
+.fixedBody {
+  position: fixed;
+  width: 100%;
+}
+

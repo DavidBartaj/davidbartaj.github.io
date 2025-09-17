@@ -1,0 +1,190 @@
+#payPage {
+  width: 100%;
+  min-height: 75vh;
+  background-size: cover;
+
+  .payPageWrapper {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 53px 0 53px 0;
+
+
+    .payPageTitle {
+      width: 100%;
+
+
+      h3 {
+        font-family: OpenSans-ExtraBold;
+        text-transform: uppercase;
+        font-size: 60px;
+        letter-spacing: 1.2px;
+        color: white;
+      }
+
+      h4 {
+        font-family: OpenSans-ExtraBold;
+        text-transform: uppercase;
+        font-size: 34px;
+        letter-spacing: 1.2px;
+        color: white;
+      }
+
+    }
+
+    .btnWrapper {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 50px;
+
+      .aprivatYas {
+        .privatYas {
+          width: 350px;
+          height: 380px;
+          background: rgba(255, 255, 255, 0.1);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+
+          .privatYasImgWarpper {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+
+            img {
+              width: 200px;
+
+            }
+          }
+
+
+          p {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 34px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          div {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .aprivatYas:hover {
+        .privatYas {
+          background: rgba(255, 255, 255, 0.3);
+
+          .privatYasImgWarpper {
+            img {
+
+              width: 250px;
+            }
+
+
+          }
+
+
+        }
+      }
+
+
+      .aeasyPay {
+        .easyPay {
+          background: rgba(255, 255, 255, 0.1);
+          width: 350px;
+          height: 380px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+
+          .easyPayImg {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+
+            img {
+              width: 200px;
+
+            }
+
+          }
+
+          p {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 34px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          div {
+            font-family: OpenSans-ExtraBold;
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+
+
+      }
+
+      .aeasyPay:hover {
+        .easyPay {
+          background: rgba(255, 255, 255, 0.3);
+
+          .easyPayImg {
+            img {
+              width: 250px;
+            }
+          }
+        }
+      }
+
+      .bankDetails {
+        background: rgba(255, 255, 255, 0.1);
+        width: 350px;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        P {
+          font-family: OpenSans-ExtraBold;
+          text-transform: uppercase;
+          font-size: 16px;
+          letter-spacing: 1.2px;
+          color: white;
+          text-align: center;
+          margin-top: 20px;
+
+        }
+      }
+
+
+    }
+  }
+
+}

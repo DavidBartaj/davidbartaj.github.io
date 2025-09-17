@@ -1,0 +1,56 @@
+.payButtWrapper {
+
+  a {
+    width: 90%;
+    height: 50px;
+    background: #e2bf58;
+    margin: 20px auto 20px auto;
+    outline: none;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: OpenSans-Regular;
+
+
+
+  }
+
+  a:hover {
+    color: white;
+    border-color: white;
+    cursor: pointer;
+    background: #a4903a;
+  }
+}
+.payRedButtWrapper{
+  a {
+    width: 100%;
+    height: 100px;
+   // background: red;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    outline: none;
+    border: 5px solid rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    font-family: OpenSans-ExtraBold;
+    text-transform: uppercase;
+
+
+
+  }
+
+  a:hover {
+    border-color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}

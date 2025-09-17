@@ -1,0 +1,98 @@
+body {
+  //background: url("../img/s");
+  background: black;
+}
+
+
+.contentBG {
+  background: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  box-shadow: 35px 35px 55px black;
+
+}
+
+.contentWrapper {
+  width: 80%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentWrapper h1 {
+  font-family: OpenSans-ExtraBold;
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.contentWrapper p {
+  width: 100%;
+  font-family: OpenSans;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 1.3px;
+  text-align: left;
+  padding: 5px 0;
+}
+
+.contentWrapper p a {
+  color: white;
+}
+
+#sendInfoButt {
+  padding: 20px 0;
+  width: 80%;
+  background: #e2bf58;
+  text-transform: uppercase;
+  font-family: OpenSans-Bold;
+  font-size: 24px;
+  outline: none;
+  border: 5px solid black;
+  border-radius: 30px;
+  margin: 20px 0 20px 0;
+}
+
+#sendInfoButt:hover {
+  color: white;
+  border-color: white;
+  cursor: pointer;
+  background: #a4903a;
+}
+
+#sendInfoButt:active {
+  outline: none;
+}
+
+@media screen and (max-width: 479px) {
+  .contentWrapper h1 {
+    font-size: 22px;
+  }
+
+  .contentWrapper p {
+    font-size: 13px;
+  }
+
+  #sendInfoButt {
+    width: 100%;
+    font-size: 23px;
+    padding: 8px 0;
+  }
+
+  .logo {
+    width: 245px;
+  }
+}
+
+
+
+
+
+
