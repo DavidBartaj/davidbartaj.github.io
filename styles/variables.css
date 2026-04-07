@@ -1,0 +1,53 @@
+:root {
+    /* Твоя нова палітра */
+    --primary-red: #e11d48;    /* Акцентний червоний */
+    --primary-green: #10b981;  /* Акцентний зелений */
+    --bg-white: #ffffff;       /* Чистий білий */
+    --text-dark: #1e293b;      /* Темний текст */
+
+    /* Додаткові налаштування */
+    --glass-bg: rgba(255, 255, 255, 0.8);
+
+
+    /* Основні кольори (залишаємо як було) */
+    --color-main-dark: #1e293b; /* Темно-синій фон (Hero/Footer) */
+    --color-accent-blue: #38bdf8; /* Блакитний колір кнопок та посилань */
+    --color-accent-hover: #0ea5e9; /* Блакитний при наведенні */
+
+    /* Фони та текст */
+    --bg-light: #f8fafc; /* Світло-сірий фон для секцій (advantages) */
+    --text-main: #334155; /* Основний колір тексту */
+    --text-muted: #64748b; /* Другорядний (сірий) текст */
+    --text-light: #f1f5f9; /* Світлий текст для темних фонів */
+
+    /* Статуси (робочий час) */
+    --color-success: #10b981; /* Зелений (працюємо) */
+    --color-danger: #ef4444; /* Червоний (зачинено) */
+
+    /* Геометрія та ефекти */
+    --radius-main: 12px; /* Закруглення карток та кнопок */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+
+    /* Фоновий колір футера та темних блоків */
+    --bg-footer: #1e293b;
+
+    /* Кольори тексту для темного фону */
+    --footer-text-main: #f8fafc;
+    --footer-text-muted: #94a3b8;
+
+    /* Акценти та межі */
+    --footer-accent: #38bdf8;
+    --footer-border: rgba(255, 255, 255, 0.05);
+    --footer-social-bg: rgba(255, 255, 255, 0.03);
+
+    /* Кольори хедера */
+    --header-bg: #ffffff;
+    --header-text: #1e293b;
+    --header-text-muted: #475569;
+    --header-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --header-height: 70px;
+
+}
+

@@ -1,0 +1,157 @@
+
+
+/* Основний контейнер */
+.hero-center {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Для слайдера краще фіксована висота екрана */
+    background: #1e293b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Налаштування слайдів */
+.slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e293b;
+    z-index: 1;
+
+    /* Початковий стан: слайд схований зверху */
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+}
+
+/* Активний слайд: заїжджає на своє місце */
+.slide.active {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2;
+}
+
+/* Слайд, що йде: можна додати ефект відходу вниз (опціонально) */
+.slide.exit {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+/* КОНТЕНТНА ЧАСТИНА */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 20px 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Кнопки */
+.hero-actions { display: flex; gap: 15px; justify-content: center; }
+
+.btn-solid {
+    background: #3498db;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+    transition: 0.3s ease;
+}
+
+.btn-outline {
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
+}
+
+.badge-new {
+    background: rgba(52, 152, 219, 0.15);
+    color: #3498db;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ФОНОВИЙ ДЕКОР */
+.hero-visual-decor { position: absolute; inset: 0; z-index: 1; }
+.gradient-ball {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #3498db 0%, rgba(52, 152, 219, 0) 70%);
+    opacity: 0.3;
+    animation: moveGradient 10s infinite ease-in-out;
+}
+
+.background-icon { position: absolute; color: rgba(52, 152, 219, 0.05); z-index: 1; }
+.background-icon-1 { width: 500px; height: 500px; right: -5%; top: -5%; transform: rotate(-15deg); }
+
+/* КРАПКИ */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 20;
+}
+
+.dot {
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: #3498db;
+    width: 60px;
+}
+
+@keyframes moveGradient {
+    0%, 100% { top: 10%; left: 10%; }
+    50% { top: 70%; left: 70%; }
+}
+
+@media (max-width: 768px) {
+    .hero-center { min-height: 70vh }
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-actions { flex-direction: column; }
+    .background-icon-1 { width: 250px; height: 250px; }
+}

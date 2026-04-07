@@ -1,0 +1,64 @@
+
+
+/* --- START: COVERAGE STYLES --- */
+.coverage-section {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.subtitle-dark {
+    color: #64748b;
+    margin-top: 10px;
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.loc-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #1e293b;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.loc-card span {
+    margin-right: 8px;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+.loc-card:hover {
+    background: #fff;
+    border-color: #3498db;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+    transform: translateY(-3px);
+}
+
+.loc-card:hover span {
+    filter: grayscale(0);
+}
+
+.coverage-info {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.coverage-info a {
+    color: #3498db;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --- END: COVERAGE STYLES --- */

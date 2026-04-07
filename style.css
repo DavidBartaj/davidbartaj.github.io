@@ -1,0 +1,55 @@
+/* 1. Налаштування та змінні (мають бути першими) */
+@import "styles/variables.css";
+@import "styles/header.css";
+
+/* 2. Основні секції */
+@import "styles/hero.css";
+@import "styles/advantages.css";
+@import "styles/tariffs.css";
+@import "styles/location.css";
+
+/* 3. Компоненти та вікна */
+@import "styles/order_modal.css";
+@import "styles/pay_btn.css";
+@import "styles/tv.css";
+@import "styles/pay_page.css";
+@import "styles/icons.css";
+
+/* 4. Футер (завжди в кінці) */
+@import "styles/footer.css";
+
+
+
+/* --- START: GLOBAL STYLES (Загальні налаштування) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.bg-light {
+    background: #f9f9f9;
+}
+a{
+    text-decoration: none;
+}
+/* --- END: GLOBAL STYLES --- */
+
+

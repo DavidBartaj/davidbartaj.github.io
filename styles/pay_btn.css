@@ -1,0 +1,67 @@
+
+/* --- FLOATING PAY BUTTON --- */
+/* --- FIXED RED PAY BUTTON STYLE --- */
+.fixed-pay-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #e74c3c; /* Насичений червоний */
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 10px 25px rgba(231, 76, 60, 0.4); /* Червона тінь для глибини */
+    z-index: 2000;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase; /* Робимо текст більш помітним */
+    letter-spacing: 0.5px;
+}
+
+.fixed-pay-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #c0392b; /* Темніший червоний при наведенні */
+    box-shadow: 0 15px 35px rgba(231, 76, 60, 0.6);
+    color: white;
+}
+
+.pay-btn-icon {
+    font-size: 1.3rem;
+    display: flex;
+}
+
+/* Адаптивність для смартфонів */
+@media (max-width: 768px) {
+    .fixed-pay-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .pay-btn-icon {
+        font-size: 1.1rem;
+    }
+}
+
+/* М'яка пульсація фону (надає ефекту "живої" кнопки) */
+@keyframes pulse-red-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(231, 76, 60, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+    }
+}
+
+.fixed-pay-button {
+    animation: pulse-red-glow 2s infinite;
+}

@@ -1,0 +1,32 @@
+/*Іконки в модулі переваг*/
+.card-icon svg{
+    stroke: #3498db;      /* Синій колір */
+    width: 30px;          /* Ширина */
+    height: 30px;         /* Висота */
+    stroke-width: 2px;    /* Товста лінія */
+}
+
+
+/*Великі (фонові) іконки в мордулі переваг*/
+.f-icon svg{
+    stroke: #f9fdff;
+    width: 50px;
+    height: 50px;
+    stroke-width: 2px;
+}
+
+
+/*Іконки телефона в футері*/
+#contacts ul li a svg, li svg{
+    width: 15px;
+    height: 15px;
+    stroke-width: 2px;
+}
+
+
+/*Іконки соцмереж у футері*/
+.social-item span svg{
+    width: 20px;
+    height: 20px;
+    stroke-width: 2px;
+}

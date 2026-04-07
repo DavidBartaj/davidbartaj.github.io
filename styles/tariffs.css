@@ -1,0 +1,188 @@
+
+/* --- START: TARIFF CARDS --- */
+/* --- DARK TARIFFS SECTION --- */
+/* --- TARIFFS LIGHT STYLE --- */
+.tariffs-light-section {
+    padding: 80px 0;
+    background: #f1f5f9; /* Світлий фон, щоб відділити від темних переваг */
+}
+
+/* Обгортка для скролу */
+.tariffs-scroll-wrapper {
+    overflow-x: auto;
+    padding: 20px 10px 40px;
+    -webkit-overflow-scrolling: touch; /* Плавність на iOS */
+}
+
+/* Приховуємо стандартний скролбар, якщо хочеш чистий вигляд */
+.tariffs-scroll-wrapper::-webkit-scrollbar { display: none; }
+
+.tariffs-container {
+    display: flex;
+    gap: 25px;
+    min-width: max-content; /* Важливо для скролу */
+    margin: 0 auto;
+}
+
+/* КАРТКА ТАРИФУ */
+.tariff-card-glass {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    padding: 45px 30px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: 0.3s ease;
+}
+
+/* Кольоровий акцент для популярного тарифу */
+.featured-blue {
+    border: 2px solid #3498db;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.15);
+    transform: scale(1.02);
+}
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: #f1f5f9;
+    padding: 4px 15px;
+    border-radius: 20px;
+    color: #64748b;
+}
+
+.card-badge.primary { background: #3498db; color: white; }
+
+.card-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+.tariff-card-glass h3 {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.speed-box {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+.speed-box span { font-size: 1rem; color: #64748b; }
+
+.price-box {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #3498db;
+    margin-bottom: 25px;
+}
+.price-box span { font-size: 0.9rem; font-weight: 400; color: #94a3b8; }
+
+.features-mini {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    min-height: 80px; /* Тримаємо кнопки на одному рівні */
+}
+.features-mini li {
+    font-size: 0.9rem;
+    color: #475569;
+    padding: 5px 0;
+}
+
+.legal-text {
+    font-size: 0.65rem;
+    color: #88898c;
+    margin-top: 15px;
+}
+
+/* Стиль карток при наведенні */
+.tariff-card-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* Адаптація під мобілки */
+@media (max-width: 1200px) {
+    .tariffs-container {
+        padding-left: 5%; /* Початковий відступ для скролу */
+
+    }
+}
+
+.position-relative { position: relative; }
+
+.nav-btn {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.prev-btn { left: -25px; }
+.next-btn { right: -25px; }
+
+/* Приховуємо стрілки на мобільних, там краще гортати пальцем */
+@media (max-width: 768px) {
+    /* 1. Дозволяємо контейнеру скролитись, але не обрізати тіні */
+    .tariffs-scroll-wrapper {
+        padding: 20px 0 40px 15px !important; /* Відступ зліва для першої картки */
+        overflow-x: auto !important;
+        display: block !important;
+    }
+
+    /* 2. Ряд карток */
+    .tariffs-container {
+        display: flex !important;
+        flex-wrap: nowrap !important; /* ЗАБОРОНЯЄМО перенос на новий рядок */
+        gap: 15px !important;
+        width: auto !important;
+    }
+
+    /* 3. САМА КАРТКА (Секрет виглядання тут) */
+    .tariff-card-glass {
+        width: 80vw !important; /* 80% ширини екрану */
+        min-width: 280px !important; /* Щоб на зовсім малих телефонах не була мікроскопічною */
+        flex-shrink: 0 !important; /* ЗАБОРОНЯЄМО картці стискатись */
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* Популярна картка на мобілці не повинна збільшуватись (scale), бо вона зламає скрол */
+    .featured-blue {
+        transform: scale(1) !important;
+        border: 2px solid #3498db !important;
+    }
+
+    /* Ховаємо стрілки, бо вони на мобілці заважають */
+    .nav-btn {
+        display: none !important;
+    }
+}
+
+/* --- END: TARIFF CARDS --- */
