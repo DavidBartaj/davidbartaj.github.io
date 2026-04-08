@@ -1,47 +1,58 @@
-
 /* --- START: TARIFF CARDS --- */
-/* --- DARK TARIFFS SECTION --- */
-/* --- TARIFFS LIGHT STYLE --- */
+
 .tariffs-light-section {
     padding: 80px 0;
-    background: #f1f5f9; /* Світлий фон, щоб відділити від темних переваг */
+    background: var(--color-soft-cream); /* Використовуємо Soft Cream для фону секції */
 }
 
 /* Обгортка для скролу */
 .tariffs-scroll-wrapper {
     overflow-x: auto;
     padding: 20px 10px 40px;
-    -webkit-overflow-scrolling: touch; /* Плавність на iOS */
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Приховуємо стандартний скролбар, якщо хочеш чистий вигляд */
-.tariffs-scroll-wrapper::-webkit-scrollbar { display: none; }
+.tariffs-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    position: relative;
+}
 
 .tariffs-container {
     display: flex;
     gap: 25px;
-    min-width: max-content; /* Важливо для скролу */
+    min-width: max-content;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* КАРТКА ТАРИФУ */
 .tariff-card-glass {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
+    border: 1px solid rgba(166, 130, 74, 0.2); /* Легкий контур Antique Gold */
     border-radius: 30px;
     padding: 45px 30px;
     width: 320px;
     text-align: center;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     transition: 0.3s ease;
 }
+.tariff-card-glass:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+ }
 
-/* Кольоровий акцент для популярного тарифу */
-.featured-blue {
-    border: 2px solid #3498db;
-    background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
-    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.15);
+/* Кольоровий акцент для популярного тарифу (замість синього) */
+.featured-emerald {
+    border: 2px solid var(--color-emerald-green); /* Акцент Emerald Green */
+    background: linear-gradient(180deg, #ffffff 0%, rgba(21, 66, 48, 0.05) 100%);
+    box-shadow: 0 15px 40px rgba(21, 66, 48, 0.15);
     transform: scale(1.02);
 }
 
@@ -53,133 +64,183 @@
     font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
-    background: #f1f5f9;
+    background: var(--color-soft-cream);
     padding: 4px 15px;
     border-radius: 20px;
-    color: #64748b;
+    color: var(--color-charcoal-black);
 }
 
-.card-badge.primary { background: #3498db; color: white; }
+.legal-text {
+    color: rgba(0, 0, 0, 0.30);
+    padding: 20px 0 0 0;
+    font-size: 12px;
+}
 
-.card-icon { font-size: 2.5rem; margin-bottom: 15px; }
+/* Смарагдовий бейдж для популярного тарифу */
+.card-badge.primary {
+    background: var(--color-emerald-green);
+    color: white;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+
+}
+
+/* Кнопки */
+.order-btn-border, .order-btn-solid {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background: var(--color-emerald-green);
+    color: white;
+}
+
+.order-btn-border {
+    background: transparent;
+    border: 2px solid var(--color-emerald-green);
+    color: var(--color-emerald-green);
+}
+.order-btn-border:hover {
+    background: var(--color-emerald-green);
+
+    color: var(--color-soft-cream);
+}
+.order-btn-solid:hover{
+    background: #113526;
+}
 
 .tariff-card-glass h3 {
     font-size: 1.1rem;
-    color: #94a3b8;
-    margin-bottom: 10px;
+    color: var(--color-antique-gold); /* Заголовки в Antique Gold */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .speed-box {
     font-size: 3.2rem;
     font-weight: 900;
-    color: #1e293b;
+    color: var(--color-emerald-green);
     margin-bottom: 10px;
 }
-.speed-box span { font-size: 1rem; color: #64748b; }
+
+.speed-box span {
+    font-size: 1rem;
+    color: var(--color-emerald-green);
+}
 
 .price-box {
     font-size: 2rem;
     font-weight: 800;
-    color: #3498db;
-    margin-bottom: 25px;
+    color: var(--color-charcoal-black);
+    margin-bottom: 30px;
 }
-.price-box span { font-size: 0.9rem; font-weight: 400; color: #94a3b8; }
 
+.price-box span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+/* Список переваг (вирівнювання вліво, як на скріншоті) */
 .features-mini {
     list-style: none;
     padding: 0;
-    margin-bottom: 30px;
-    min-height: 80px; /* Тримаємо кнопки на одному рівні */
+    margin-bottom: 35px;
+    text-align: left;
+    display: inline-block;
 }
+
 .features-mini li {
-    font-size: 0.9rem;
-    color: #475569;
-    padding: 5px 0;
+    font-size: 0.95rem;
+    color: var(--color-charcoal-black);
+    padding: 8px 0;
+    line-height: 1.4;
 }
 
-.legal-text {
-    font-size: 0.65rem;
-    color: #88898c;
-    margin-top: 15px;
+/* Кнопка замовлення */
+.btn-tariff {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid var(--color-emerald-green);
+    color: var(--color-emerald-green);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
 }
 
-/* Стиль карток при наведенні */
-.tariff-card-glass:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+.featured-emerald .btn-tariff {
+    background: var(--color-emerald-green);
+    color: white;
 }
 
-/* Адаптація під мобілки */
-@media (max-width: 1200px) {
-    .tariffs-container {
-        padding-left: 5%; /* Початковий відступ для скролу */
-
-    }
+.btn-tariff:hover {
+    background: var(--color-charcoal-black);
+    border-color: var(--color-charcoal-black);
+    color: white;
 }
 
-.position-relative { position: relative; }
-
+/* НАВІГАЦІЙНІ КНОПКИ (Стрілки як на схемі) */
 .nav-btn {
     position: absolute;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
     background: white;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-antique-gold);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    color: var(--color-antique-gold);
 }
 
 .nav-btn:hover {
-    background: #3498db;
+    background: var(--color-antique-gold);
     color: white;
-    border-color: #3498db;
-    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
 }
 
-.prev-btn { left: -25px; }
-.next-btn { right: -25px; }
+.prev-btn {
+    left: -25px;
+}
 
-/* Приховуємо стрілки на мобільних, там краще гортати пальцем */
+.next-btn {
+    right: -25px;
+}
+
+/* Адаптація під мобілки */
 @media (max-width: 768px) {
-    /* 1. Дозволяємо контейнеру скролитись, але не обрізати тіні */
     .tariffs-scroll-wrapper {
-        padding: 20px 0 40px 15px !important; /* Відступ зліва для першої картки */
-        overflow-x: auto !important;
-        display: block !important;
+        padding: 20px 0 40px 15px !important;
     }
 
-    /* 2. Ряд карток */
     .tariffs-container {
-        display: flex !important;
-        flex-wrap: nowrap !important; /* ЗАБОРОНЯЄМО перенос на новий рядок */
         gap: 15px !important;
-        width: auto !important;
     }
 
-    /* 3. САМА КАРТКА (Секрет виглядання тут) */
     .tariff-card-glass {
-        width: 80vw !important; /* 80% ширини екрану */
-        min-width: 280px !important; /* Щоб на зовсім малих телефонах не була мікроскопічною */
-        flex-shrink: 0 !important; /* ЗАБОРОНЯЄМО картці стискатись */
-        margin: 0 !important;
-        box-sizing: border-box;
+        width: 80vw !important;
+        min-width: 280px !important;
+        flex-shrink: 0 !important;
     }
 
-    /* Популярна картка на мобілці не повинна збільшуватись (scale), бо вона зламає скрол */
-    .featured-blue {
+    .featured-emerald {
         transform: scale(1) !important;
-        border: 2px solid #3498db !important;
     }
 
-    /* Ховаємо стрілки, бо вони на мобілці заважають */
     .nav-btn {
         display: none !important;
     }

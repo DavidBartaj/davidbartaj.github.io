@@ -2,7 +2,7 @@ export function initHero() {
     // Шукаємо тільки слайди
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
-    const slideInterval = 6000; // 6 секунд
+    const slideInterval = 10000; // 10 секунд
 
     if (!slides.length) return; // Захист, якщо на сторінці немає слайдера
 

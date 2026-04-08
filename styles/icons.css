@@ -1,6 +1,6 @@
 /*Іконки в модулі переваг*/
 .card-icon svg{
-    stroke: #3498db;      /* Синій колір */
+    color: var(--color-emerald-green);      /* Синій колір */
     width: 30px;          /* Ширина */
     height: 30px;         /* Висота */
     stroke-width: 2px;    /* Товста лінія */

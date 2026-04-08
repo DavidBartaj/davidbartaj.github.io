@@ -1,13 +1,25 @@
-
-/* --- PAY PAGE STYLES --- */
+/* --- PAY PAGE STYLES (LIGHT VERSION) --- */
 .pay-page-bg {
-    background: radial-gradient(circle at top, #1e293b, #0f172a);
+    background: var(--color-soft-cream); /* Світлий фон як на сторінці ТБ */
     padding: 80px 0 80px;
-    color: white;
+    color: var(--color-charcoal-black);
 }
 
-.section-title-white { color: #fff; font-size: 2.5rem; text-align: center; margin-bottom: 10px; }
-.section-subtitle-white { color: #94a3b8; text-align: center; margin-bottom: 60px; }
+.section-title-white {
+    color: var(--color-charcoal-black);
+    font-size: 2.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.section-subtitle-white {
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 60px;
+}
 
 .pay-grid {
     display: flex;
@@ -17,87 +29,111 @@
 }
 
 .pay-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: #ffffff; /* Чистий білий для карток */
+    border: 1px solid #a6824a33; /* Тонкий золотий контур */
     border-radius: 30px;
     padding: 40px;
     width: 400px;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: var(--color-charcoal-black);
     transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .comment_privat24{
-        font-size: 12px;
-        width: 95%;
-        color: #94a3b8;
-        text-align: start;
-    }
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.pay-card .comment_privat24 {
+    font-size: 12px;
+    width: 95%;
+    color: #64748b;
+    text-align: start;
+    margin-top: 10px;
 }
 
 .pay-card:hover {
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.07);
-    border-color: #3498db;
+    background: #ffffff;
+    border-color: var(--color-antique-gold);
+    box-shadow: 0 12px 30px rgba(166, 130, 74, 0.1);
 }
 
 .pay-logo img {
     height: 60px;
     margin-bottom: 25px;
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+    filter: none; /* Прибираємо тінь для чистоти */
 }
 
-.pay-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
-.pay-card p { color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px; }
+.pay-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--color-charcoal-black);
+}
+
+.pay-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
 
 .pay-btn-fake {
-    background: #3498db;
+    background: var(--color-emerald-green);
     padding: 12px 40px;
     border-radius: 50px;
     font-weight: 700;
     transition: 0.3s;
+    color: white;
 }
 
-/* Акцент на EasyPay */
+.pay-card:hover .pay-btn-fake {
+    background: var(--color-antique-gold);
+}
+
+/* Акцент на пріоритетну картку */
 .featured-pay {
-    border-color: rgba(52, 152, 219, 0.5);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 2px solid var(--color-antique-gold);
+    box-shadow: 0 10px 40px rgba(166, 130, 74, 0.15);
 }
 
 /* Картка з реквізитами */
 .info-card { cursor: default; }
-.info-card:hover { transform: none; border-color: rgba(255, 255, 255, 0.1); }
+.info-card:hover { transform: none; border-color: #a6824a33; }
 
 .bank-details {
     text-align: left;
-    background: rgba(0,0,0,0.2);
+    background: var(--color-soft-cream);
     padding: 20px;
     border-radius: 15px;
     width: 100%;
 }
 
-.bank-details p { margin-bottom: 8px; color: #cbd5e1; }
+.bank-details p { margin-bottom: 8px; color: var(--color-charcoal-black); }
 
 .iban-box {
     margin-top: 15px;
-    background: #0f172a;
-    padding: 10px;
+    background: #ffffff;
+    padding: 12px;
     border-radius: 8px;
     font-family: monospace;
-    font-size: 0.8rem;
-    color: #3498db;
+    font-size: 0.80rem;
+    color: var(--color-emerald-green); /* Смарагдовий для IBAN у світлій темі */
     cursor: pointer;
-    border: 1px dashed #3498db;
+    border: 1px dashed var(--color-antique-gold);
     position: relative;
+    transition: 0.3s;
+}
+
+.iban-box:hover {
+    background: #f1f5f9;
+    border-style: solid;
 }
 
 .copy-hint {
     display: block;
-    font-size: 0.6rem;
-    color: #64748b;
+    font-size: 0.65rem;
+    color: #94a3b8;
     margin-top: 5px;
 }
 

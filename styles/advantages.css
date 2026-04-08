@@ -1,140 +1,153 @@
-
 /* --- START: ADVANTAGES STYLES --- */
 
 .features-section {
     padding: 100px 0;
-    background: #0f172a; /* Глибокий темно-синій */
-    color: #fff;
+    background: var(--color-charcoal-black);
+    color: var(--color-soft-cream);
     overflow: hidden;
 }
 
+/* Використовуємо контейнер, щоб тримати сітку в межах, як у хедері */
+.features-container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
 .features-header {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     text-align: center;
 }
 
 .subtitle {
-    color: #3498db;
+    color: var(--color-antique-gold);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .main-title {
-    font-size: 2.8rem;
-    margin-top: 10px;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 .highlight {
-    color: #3498db;
+    color: var(--color-emerald-green);
+    /* Або градієнт, якщо хочеш більше лоску: */
+    background: linear-gradient(90deg, var(--color-emerald-green), var(--color-antique-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 /* Стиль картки */
 .f-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 40px 30px;
-    border-radius: 20px;
+    background: rgba(230, 226, 218, 0.03); /* Soft Cream з мінімальною прозорістю */
+    border: 1px solid rgba(166, 130, 74, 0.1); /* Antique Gold контур */
+    padding: 50px 35px;
+    border-radius: 24px;
     position: relative;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    backdrop-filter: blur(12px);
     overflow: hidden;
     z-index: 1;
 }
 
 .f-card:hover {
-    background: rgba(255, 255, 255, 0.07);
-    transform: translateY(-15px);
-    border-color: #3498db;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    background: rgba(230, 226, 218, 0.07);
+    transform: translateY(-12px);
+    border-color: var(--color-antique-gold);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 
 /* Номер картки на фоні */
 .f-number {
     position: absolute;
     top: 20px;
-    right: 20px;
-    font-size: 4rem;
+    right: 30px;
+    font-size: 5rem;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.05);
+    color: rgba(166, 130, 74, 0.05); /* Ледь помітне золото */
     transition: 0.4s;
 }
 
 .f-card:hover .f-number {
-    color: rgba(52, 152, 219, 0.2);
+    color: rgba(166, 130, 74, 0.15);
+    transform: scale(1.1);
 }
 
 .f-icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    display: inline-block;
 }
 
 .f-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-bottom: 15px;
-    color: #fff;
+    color: var(--color-soft-cream);
 }
 
 .f-card p {
-    color: #94a3b8;
+    color: var(--color-soft-cream);
+    opacity: 0.7;
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* Акцентна картка (Енергонезалежність) */
 .f-card.featured {
-    background: linear-gradient(145deg, rgba(52, 152, 219, 0.2), rgba(26, 37, 47, 0.6));
-    border: 1px solid rgba(52, 152, 219, 0.4);
+    background: linear-gradient(145deg, rgba(21, 66, 48, 0.2), rgba(16, 17, 17, 0.8));
+    border: 1px solid rgba(21, 66, 48, 0.4);
 }
 
 .status-badge {
     display: inline-block;
     margin-top: 20px;
-    background: #e74c3c;
+    background: #c2392c; /* Більш глибокий червоний для статусу */
     color: white;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 50px;
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: 800;
+    text-transform: uppercase;
     animation: pulse 2s infinite;
 }
 
-/* Фонова іконка для глибини */
-.f-bg-icon svg{
+/* Фонова іконка для глибини всередині картки */
+.f-bg-icon svg {
     width: 200px;
     height: 200px;
     position: absolute;
-    bottom: -70px;
-    right: -60px;
-    font-size: 5rem;
-    opacity: 0.03;
+    bottom: -60px;
+    right: -50px;
+    opacity: 0.04;
+    color: var(--color-antique-gold);
     transform: rotate(-15deg);
+    pointer-events: none;
 }
 
 @keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(194, 57, 44, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(194, 57, 44, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(194, 57, 44, 0); }
 }
 
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 2rem;
-    }
+    .features-section { padding: 70px 0; }
+    .main-title { font-size: 2.2rem; }
+    .nav-container { padding: 0 20px; }
+    .f-card { padding: 40px 25px; }
 }
-
 
 /* --- END: ADVANTAGES STYLES --- */

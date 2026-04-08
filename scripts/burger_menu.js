@@ -23,3 +23,4 @@ export function initBurgerMenu() {
     }
     console.log("Work time script loaded");
 }
+

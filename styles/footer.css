@@ -1,6 +1,7 @@
+/* --- START: FOOTER STYLES --- */
 .footer {
-    background: var(--bg-footer);
-    color: var(--footer-text-main);
+    background: var(--color-charcoal-black); /* Глибокий темний фон */
+    color: #f8fafc;
     padding: 60px 0 20px;
 }
 
@@ -11,10 +12,12 @@
 }
 
 .footer-col h4 {
-    color: #fff;
+    color: var(--color-soft-cream);
     margin-bottom: 20px;
     font-size: 1.1rem;
     position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .footer-col h4::after {
@@ -22,7 +25,7 @@
     display: block;
     width: 30px;
     height: 2px;
-    background: var(--footer-accent);
+    background: var(--color-antique-gold); /* Золотий акцент під заголовками */
     margin-top: 8px;
 }
 
@@ -34,24 +37,24 @@
 .footer-col ul li {
     margin-bottom: 12px;
     font-size: 0.9rem;
-    color: var(--footer-text-muted);
+    color: #94a3b8;
 }
 
 .footer-col a {
-    color: var(--footer-text-muted);
+    color: #94a3b8;
     text-decoration: none;
-    transition: var(--transition);
+    transition: 0.3s ease;
 }
 
 .footer-col a:hover {
-    color: var(--footer-accent);
+    color: var(--color-antique-gold); /* Золото при наведенні */
     padding-left: 5px;
 }
 
 .footer-bottom {
     margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid var(--footer-border);
+    border-top: 1px solid #ffffff1a; /* Тонка прозора лінія */
     text-align: center;
     font-size: 0.8rem;
     color: #64748b;
@@ -69,13 +72,13 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: var(--footer-text-muted);
+    color: #94a3b8;
     font-size: 0.95rem;
-    transition: var(--transition);
+    transition: 0.3s ease;
     padding: 8px 12px;
-    border-radius: var(--radius-main);
-    background: var(--footer-social-bg);
-    border: 1px solid var(--footer-border);
+    border-radius: 10px;
+    background: #ffffff05; /* Дуже легкий фон */
+    border: 1px solid #ffffff1a;
 }
 
 .social-item span {
@@ -85,18 +88,15 @@
 
 .social-item:hover {
     transform: translateX(5px);
+    background: #ffffff0d;
 }
 
-/* Кольори при наведенні (залишаємо брендові) */
-.social-item.instagram:hover { color: #e1306c; border-color: #e1306c; background: rgba(225, 48, 108, 0.05); }
-.social-item.viber:hover { color: #7360f2; border-color: #7360f2; background: rgba(115, 96, 242, 0.05); }
-.social-item.email:hover { color: var(--footer-accent); border-color: var(--footer-accent); background: rgba(52, 152, 219, 0.05); }
+/* Кольори при наведенні */
+.social-item.instagram:hover { color: #e1306c; border-color: #e1306c99; }
+.social-item.viber:hover { color: #7360f2; border-color: #7360f299; }
+.social-item.email:hover { color: var(--color-antique-gold); border-color: var(--color-antique-gold); }
 
 /* --- СТАТУС В ФУТЕРІ --- */
-.footer-status-box {
-    margin-top: 15px;
-}
-
 .status-mini {
     display: inline-flex;
     align-items: center;
@@ -104,7 +104,8 @@
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700; /* Трохи жирніше для кращої читабельності */
+    transition: 0.3s ease;
 }
 
 .dot-mini {
@@ -113,21 +114,111 @@
     border-radius: 50%;
 }
 
+/* --- СТАТУС В ФУТЕРІ (РАДИКАЛЬНО ОНОВЛЕНО) --- */
+.status-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px; /* Трохи збільшуємо відступи, щоб було більше кольору */
+    border-radius: 20px; /* Більше закруглення для стилю "бейдж" */
+    font-size: 0.85rem; /* Трохи більший шрифт */
+    font-weight: 800; /* Максимально жирний для читабельності */
+    transition: 0.3s ease;
+
+    /* Відключаємо тінь для тексту, вона тут не потрібна */
+    text-shadow: none !important;
+}
+
+.dot-mini {
+    width: 10px; /* Трохи більша крапка */
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* ЯСКРАВИЙ, КРИЧУЩИЙ СМАРАГДОВИЙ СТАТУС (ОНОВЛЕНО) */
 .status-online-footer {
-    background: rgba(46, 204, 113, 0.15);
-    color: #2ecc71;
+    /* Фон робимо насиченим смарагдовим, але з легким градієнтом для об'єму */
+    background: linear-gradient(135deg, #2ecc71 0%, #154230 100%);
+
+    /* Текст робимо чистим білим, щоб він "кричав" на фоні */
+    color: #ffffff !important;
+
+    /* Додаємо сильну зовнішню смарагдову тінь-світіння */
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+
+    /* Додаємо тонку яскраву межу */
+    /*border: 1px solid rgba(255, 255, 255, 0.7);*/
 }
 
 .status-online-footer .dot-mini {
-    background: #2ecc71;
-    box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+    /* Крапка тепер буде яскравою, світло-зеленою */
+    background: #a3e635;
+
+    /* Світіння крапки */
+    box-shadow: 0 0 10px rgba(163, 230, 53, 0.8);
+
+    /* Тонка біла межа навколо крапки для чіткості */
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* ЯСКРАВИЙ ЧЕРВОНИЙ СТАТУС "НЕРОБОЧИЙ ЧАС" */
 .status-offline-footer {
-    background: rgba(231, 76, 60, 0.15);
-    color: #e74c3c;
+    /* Насичений червоний градієнт для фону */
+    background: linear-gradient(135deg, #ef4444 0%, #7f1d1d 100%);
+
+    /* Чистий білий текст для максимального контрасту */
+    color: #ffffff !important;
+
+    /* Зовнішнє червоне світіння */
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+
+    /* Тонка напівпрозора межа */
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .status-offline-footer .dot-mini {
-    background: #e74c3c;
+    /* Крапка стає світло-рожевою/білою, щоб виділятися на червоному */
+    background: #fecaca;
+
+    /* Світіння навколо крапки */
+    box-shadow: 0 0 10px rgba(254, 202, 202, 0.8);
+
+    /* Межа для чіткості */
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
+#footer-status-text{
+    font-size: 12px;
+}
+
+
+/* Графік роботи на свята */
+.footer-holiday-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 8px 12px;
+    width: fit-content;
+    max-width: 90%;
+    background: #ef44441a;
+    border-radius: 10px;
+    border: 1px solid #ef444433;
+    font-size: 0.85rem;
+    color: #f87171;
+    line-height: 1.3;
+}
+
+.holiday-alert {
+    flex-shrink: 0;
+    background: #ef4444;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+/* --- END: FOOTER STYLES --- */

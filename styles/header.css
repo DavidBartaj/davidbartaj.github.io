@@ -1,242 +1,159 @@
 /* --- START: HEADER STYLES --- */
+:root {
+    --nav-height: 70px; /* Фіксуємо висоту для зручності відступів */
+}
+
 .navbar {
-    background: var(--bg-white);
-    color: var(--text-dark);
+    background: var(--color-soft-cream);
+    color: var(--color-charcoal-black);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 25px;
+    padding: 0 125px;
+    height: var(--nav-height);
     position: sticky;
     top: 0;
     z-index: 1000;
-    margin: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #3498db;
+    display: flex;
+    align-items: center;
 }
 
-.logo img{
-    width: 20vh;
+.logo img {
+    height: 45px; /* Більш стабільний розмір ніж vh для лого */
+    width: auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #3498db;
-
-}
-
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #1e293b;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-    color: #475569;
+    color: var(--color-charcoal-black);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #3498db;
+    color: var(--color-emerald-green);
 }
 
-/* Стиль кнопки Кабінету */
+/* Кнопка Кабінету (Desktop) */
 .btn-cabinet {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #f1f5f9;
-    color: #1e293b;
-    padding: 10px 18px;
-    border-radius: 10px;
+    background: transparent;
+    color: var(--color-charcoal-black);
+    padding: 10px 20px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 0.9rem;
-    border: 1px solid #e2e8f0;
-    transition: 0.3s;
+    border: 2px solid var(--color-antique-gold);
+    transition: 0.3s all;
 }
 
 .btn-cabinet:hover {
-    background: #3498db;
-    color: #fff;
-    border-color: #3498db;
+    background: var(--color-antique-gold);
+    color: white;
     transform: translateY(-2px);
 }
 
-.btn-cabinet .icon {
-    font-size: 1.1rem;
-}
-
-/* Адаптивність для мобілок (приховуємо частину меню, якщо треба) */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    /* Тут потім можна зробити "бургер" */
-    .navbar {
-        padding: 10px 20px;
-    }
-}
-
-
-/* --- MOBILE MENU STYLES --- */
-
-/* Ховаємо кабінет з шапки на мобільних, щоб не заважав логотипу */
-@media (max-width: 768px) {
-    /* Спочатку приховуємо меню (виносимо за екран вгору або вбік) */
-    .nav-links {
-        position: fixed; /* Краще fixed, щоб перекривало все */
-        top: 60px;
-        left: -100%; /* За межами екрану зліва */
-        width: 100%;
-        height: calc(100vh - 60px); /* На всю висоту екрану */
-        background: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-        transition: 0.4s ease-in-out;
-        z-index: 998;
-    }
-
-    /* Блокування скролу при відкритому меню */
-    body.no-scroll {
-        overflow: hidden;
-        height: 100vh;
-    }
-
-    .btn-cabinet {
-        display: none;
-    }
-
-    .menu-toggle {
-        margin-left: auto; /* Додатково штовхає бургер вправо, якщо між ним і лого є місце */
-        padding: 10px 0 10px 10px; /* Трохи збільшуємо зону кліку, але притискаємо до краю */
-    }
-
-    /* Цей клас додає JavaScript при кліку */
-    .nav-links.active {
-        left: 0; /* Меню виїжджає на екран */
-    }
-}
-
+/* --- MOBILE MENU & BURGER --- */
 .menu-toggle {
-    display: block;
+    display: none; /* Ховаємо на десктопі */
     cursor: pointer;
+    z-index: 1001;
 }
 
 .menu-toggle .bar {
     display: block;
-    width: 25px;
+    width: 28px;
     height: 3px;
-    margin: 5px auto;
-    background-color: #1e293b;
+    margin: 5px 0;
+    background-color: var(--color-charcoal-black);
     transition: 0.3s;
+    border-radius: 2px;
 }
 
-/* Стиль випадаючого списку */
-.nav-links {
-    position: absolute;
-    top: 60px; /* Висота шапки */
-    left: -100%; /* Спочатку заховане зліва */
-    flex-direction: column;
-    background-color: #fff;
-    width: 100%;
-    text-align: center;
-    transition: 0.4s;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
-    z-index: 999;
-}
+@media (max-width: 768px) {
+    .navbar {
 
-.nav-links.active {
-    left: 0; /* Виїжджає на екран */
-}
+        padding: 0 25px;
 
-.nav-links li {
-    margin: 15px 0;
-}
+    }
+    .logo img {
+        height: 25px;
 
-/* Анімація бургера в хрестик */
-.menu-toggle.is-active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.menu-toggle.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-.mobile-only {
-    display: flex;
-!important;
-}
-
-@media (min-width: 769px) {
+    }
     .menu-toggle {
-        display: none;
+        display: block;
+    }
+
+    .btn-cabinet {
+        display: none; /* Ховаємо основну кнопку на мобілці */
     }
 
     .nav-links {
-        display: flex !important; /* Примусово показуємо */
-        position: static !important; /* Скасовуємо fixed/absolute */
-        flex-direction: row !important; /* Вишиковуємо в ряд */
-        width: auto !important;
-        height: auto !important;
-        left: 0 !important;
-        background: transparent !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        transition: none !important;
+        position: fixed;
+        top: var(--nav-height);
+        left: -100%;
+        flex-direction: column;
+        padding: 30px 0 0 0;
+        background: var(--color-soft-cream);
+        width: 100%;
+        height: 100vh;
+        transition: 0.4s ease-in-out;
+        z-index: 999;
+        gap: 40px;
     }
 
-    .menu-toggle {
-        display: none !important; /* Ховаємо бургер на ПК */
+    .nav-links.active {
+        left: 0;
     }
 
+    .nav-links a {
+        font-size: 1.2rem;
+    }
 
+    /* Кнопка кабінету всередині мобільного меню */
+    .btn-cabinet-mobile {
+        background: var(--color-emerald-green);
+        color: white !important;
+        padding: 12px 30px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+    }
+
+    .btn-cabinet-mobile svg {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    /* Анімація бургера */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
 
-.btn-cabinet-mobile {
-    background: #3498db;
-    color: #fff !important;
-    padding: 10px 25px;
-    border-radius: 8px;
-    display: inline-block;
+/* Блокування скролу */
+body.no-scroll {
+    overflow: hidden;
 }
 
 /* --- END: HEADER STYLES --- */

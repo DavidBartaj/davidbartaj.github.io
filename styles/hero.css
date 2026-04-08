@@ -1,157 +1,192 @@
+/* --- START: HERO STYLES --- */
 
-
-/* Основний контейнер */
 .hero-center {
     position: relative;
     width: 100%;
-    height: 50vh; /* Для слайдера краще фіксована висота екрана */
-    background: #1e293b;
-    color: white;
+    height: 70vh;
+    background: var(--color-charcoal-black);
+    color: var(--color-soft-cream);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
 
-/* Налаштування слайдів */
+/* Слайди (Тільки вертикальний зсув) */
 .slide {
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #1e293b;
+    background: var(--color-charcoal-black);
     z-index: 1;
-
-    /* Початковий стан: слайд схований зверху */
-    opacity: 0;
     transform: translateY(-100%);
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Активний слайд: заїжджає на своє місце */
 .slide.active {
-    opacity: 1;
     transform: translateY(0);
     z-index: 2;
 }
 
-/* Слайд, що йде: можна додати ефект відходу вниз (опціонально) */
 .slide.exit {
     transform: translateY(100%);
-    opacity: 0;
+    z-index: 1;
 }
 
-/* КОНТЕНТНА ЧАСТИНА */
+/* Контентна частина */
 .hero-content {
     text-align: center;
-    max-width: 800px;
-    padding: 0 20px;
+    max-width: 900px;
+    padding: 0 30px;
     z-index: 10;
 }
 
+.badge-new {
+    display: inline-block;
+    background: rgba(166, 130, 74, 0.15);
+    color: var(--color-antique-gold);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 800;
-    line-height: 1.2;
-    margin: 20px 0;
-    background: linear-gradient(180deg, #FFFFFF 0%, #cbd5e1 100%);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    background: linear-gradient(180deg, var(--color-soft-cream) 40%, var(--color-antique-gold) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
 }
 
 .hero-content p {
-    font-size: 1.25rem;
-    color: #cbd5e1;
-    margin-bottom: 40px;
+    font-size: 1.3rem;
+    color: var(--color-soft-cream);
+    opacity: 0.85;
+    margin-bottom: 45px;
     line-height: 1.6;
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 700px;
+    margin: 0 auto 45px;
 }
 
 /* Кнопки */
-.hero-actions { display: flex; gap: 15px; justify-content: center; }
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 
 .btn-solid {
-    background: #3498db;
+    background: var(--color-emerald-green);
     color: white;
-    padding: 14px 28px;
-    border-radius: 10px;
-    font-weight: bold;
+    padding: 16px 35px;
+    border-radius: 12px;
+    font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
-    transition: 0.3s ease;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(21, 66, 48, 0.3);
+}
+
+.btn-solid:hover {
+    transform: translateY(-3px);
+    background: #1b533d;
+    box-shadow: 0 15px 30px rgba(21, 66, 48, 0.4);
 }
 
 .btn-outline {
-    padding: 14px 28px;
-    border-radius: 10px;
-    font-weight: bold;
+    padding: 16px 35px;
+    border-radius: 12px;
+    font-weight: 700;
     text-decoration: none;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-soft-cream);
+    border: 2px solid var(--color-antique-gold);
+    background: rgba(166, 130, 74, 0.05);
     backdrop-filter: blur(5px);
     transition: 0.3s ease;
 }
 
-.badge-new {
-    background: rgba(52, 152, 219, 0.15);
-    color: #3498db;
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: bold;
+.btn-outline:hover {
+    background: var(--color-antique-gold);
+    color: white;
 }
 
-/* ФОНОВИЙ ДЕКОР */
-.hero-visual-decor { position: absolute; inset: 0; z-index: 1; }
+/* Фоновий декор */
+.hero-visual-decor {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
 .gradient-ball {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, #3498db 0%, rgba(52, 152, 219, 0) 70%);
-    opacity: 0.3;
-    animation: moveGradient 10s infinite ease-in-out;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(21, 66, 48, 0.3) 0%, rgba(16, 17, 17, 0) 70%);
+    filter: blur(60px);
+    opacity: 0.6;
+    animation: moveGradient 18s infinite ease-in-out;
 }
 
-.background-icon { position: absolute; color: rgba(52, 152, 219, 0.05); z-index: 1; }
-.background-icon-1 { width: 500px; height: 500px; right: -5%; top: -5%; transform: rotate(-15deg); }
+.background-icon-1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    right: -10%;
+    top: -10%;
+    color: var(--color-antique-gold);
+    opacity: 0.04;
+    transform: rotate(-15deg);
+}
 
-/* КРАПКИ */
+@keyframes moveGradient {
+    0%, 100% { top: -10%; left: -10%; transform: scale(1); }
+    33% { top: 50%; left: 60%; transform: scale(1.2); }
+    66% { top: 80%; left: 10%; transform: scale(0.9); }
+}
+
+/* Слайдер-точки */
 .slider-dots {
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 12px;
+    gap: 15px;
     z-index: 20;
 }
 
 .dot {
-    width: 40px;
+    width: 35px;
     height: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
+    background: rgba(230, 226, 218, 0.15);
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .dot.active {
-    background: #3498db;
-    width: 60px;
+    background: var(--color-antique-gold);
+    width: 55px;
 }
 
-@keyframes moveGradient {
-    0%, 100% { top: 10%; left: 10%; }
-    50% { top: 70%; left: 70%; }
-}
-
+/* Адаптивність */
 @media (max-width: 768px) {
-    .hero-center { min-height: 70vh }
-    .hero-content h1 { font-size: 2.5rem; }
-    .hero-actions { flex-direction: column; }
-    .background-icon-1 { width: 250px; height: 250px; }
+    .hero-center { min-height: 80vh; }
+    .hero-content h1 { font-size: 2.8rem; }
+    .hero-content p { font-size: 1.1rem; }
+    .hero-actions { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
+    .btn-solid, .btn-outline { text-align: center; }
+    .background-icon-1 { width: 300px; height: 300px; right: -20%; }
+    .gradient-ball { width: 300px; height: 300px; }
 }
+
+/* --- END: HERO STYLES --- */
