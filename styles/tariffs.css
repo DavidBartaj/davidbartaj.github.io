@@ -1,59 +1,31 @@
 /* --- START: TARIFF CARDS --- */
 
 .tariffs-light-section {
-    padding: 80px 0;
-    background: var(--color-soft-cream); /* Використовуємо Soft Cream для фону секції */
+    padding: 60px 0;
+    background: var(--color-soft-cream);
 }
 
-/* Обгортка для скролу */
 .tariffs-scroll-wrapper {
     overflow-x: auto;
-    padding: 20px 10px 40px;
+    padding: 20px 0 40px;
     -webkit-overflow-scrolling: touch;
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    scroll-snap-type: x mandatory;
 }
 
 .tariffs-scroll-wrapper::-webkit-scrollbar {
     display: none;
 }
-
 .container {
     position: relative;
 }
-
 .tariffs-container {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     min-width: max-content;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* КАРТКА ТАРИФУ */
-.tariff-card-glass {
-    background: #ffffff;
-    border: 1px solid rgba(166, 130, 74, 0.2); /* Легкий контур Antique Gold */
-    border-radius: 30px;
-    padding: 45px 30px;
-    width: 320px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-    transition: 0.3s ease;
-}
-.tariff-card-glass:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 15px 35px rgba(0,0,0,0.08);
- }
-
-/* Кольоровий акцент для популярного тарифу (замість синього) */
-.featured-emerald {
-    border: 2px solid var(--color-emerald-green); /* Акцент Emerald Green */
-    background: linear-gradient(180deg, #ffffff 0%, rgba(21, 66, 48, 0.05) 100%);
-    box-shadow: 0 15px 40px rgba(21, 66, 48, 0.15);
-    transform: scale(1.02);
+    padding: 0 20px;
 }
 
 .card-badge {
@@ -69,23 +41,74 @@
     border-radius: 20px;
     color: var(--color-charcoal-black);
 }
-
-.legal-text {
-    color: rgba(0, 0, 0, 0.30);
-    padding: 20px 0 0 0;
-    font-size: 12px;
-}
-
-/* Смарагдовий бейдж для популярного тарифу */
-.card-badge.primary {
-    background: var(--color-emerald-green);
-    color: white;
-}
-
 .card-icon {
     font-size: 2.5rem;
-    margin-bottom: 25px;
+    margin: 10px 0 0 0;
 
+}
+.tariff-card-glass h3 {
+    font-size: 1.1rem;
+    color: var(--color-antique-gold); /* Заголовки в Antique Gold */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* КАРТКА ТАРИФУ */
+.tariff-card-glass {
+    background: #ffffff;
+    border: 1px solid rgba(166, 130, 74, 0.2);
+    border-radius: 30px;
+    padding: 40px 25px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center;
+}
+.tariff-card-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+ }
+.speed-box {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: var(--color-emerald-green);
+    margin-bottom: 10px;
+}
+
+.speed-box span {
+    font-size: 1rem;
+    color: var(--color-emerald-green);
+}
+.price-box {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-charcoal-black);
+
+}
+
+.price-box span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.features-mini {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+    text-align: left;
+    display: inline-block;
+}
+
+.features-mini li {
+    font-size: 0.95rem;
+    color: var(--color-charcoal-black);
+    padding: 8px 0;
+    line-height: 1.4;
 }
 
 /* Кнопки */
@@ -114,78 +137,62 @@
 .order-btn-solid:hover{
     background: #113526;
 }
-
-.tariff-card-glass h3 {
-    font-size: 1.1rem;
-    color: var(--color-antique-gold); /* Заголовки в Antique Gold */
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Смарагдовий бейдж для популярного тарифу */
+.card-badge.primary {
+    background: var(--color-emerald-green);
+    color: white;
 }
 
-.speed-box {
-    font-size: 3.2rem;
-    font-weight: 900;
-    color: var(--color-emerald-green);
-    margin-bottom: 10px;
+.legal-text {
+    color: rgba(0, 0, 0, 0.30);
+    padding: 20px 0 0 0;
+    font-size: 12px;
 }
 
-.speed-box span {
-    font-size: 1rem;
-    color: var(--color-emerald-green);
-}
-
-.price-box {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--color-charcoal-black);
-    margin-bottom: 30px;
-}
-
-.price-box span {
-    font-size: 0.9rem;
-    font-weight: 400;
-    opacity: 0.6;
-}
-
-/* Список переваг (вирівнювання вліво, як на скріншоті) */
-.features-mini {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 35px;
-    text-align: left;
-    display: inline-block;
-}
-
-.features-mini li {
-    font-size: 0.95rem;
-    color: var(--color-charcoal-black);
-    padding: 8px 0;
-    line-height: 1.4;
-}
-
-/* Кнопка замовлення */
+/* СТИЛЬ КНОПКИ (Повернення смарагдового стилю) */
 .btn-tariff {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    margin-top: auto;
     padding: 15px;
     border-radius: 12px;
     border: 2px solid var(--color-emerald-green);
     color: var(--color-emerald-green);
+    background: transparent;
     text-decoration: none;
     font-weight: 700;
-    transition: 0.3s;
+    font-size: 1rem;
+    transition: 0.3s all ease;
+    cursor: pointer;
 }
 
+/* Стиль для активної/популярної кнопки */
 .featured-emerald .btn-tariff {
     background: var(--color-emerald-green);
     color: white;
 }
 
 .btn-tariff:hover {
-    background: var(--color-charcoal-black);
-    border-color: var(--color-charcoal-black);
+    background: var(--color-emerald-green);
     color: white;
+    transform: translateY(-2px);
+}
+
+/* СПИСОК ПЕРЕВАГ */
+.features-mini {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 35px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.features-mini li {
+    font-size: 0.95rem;
+    color: var(--color-charcoal-black);
+    position: relative;
 }
 
 /* НАВІГАЦІЙНІ КНОПКИ (Стрілки як на схемі) */
@@ -214,36 +221,41 @@
 }
 
 .prev-btn {
-    left: -25px;
+    left: -40px;
 }
 
 .next-btn {
-    right: -25px;
+    right: -40px;
 }
 
-/* Адаптація під мобілки */
+
+/* АДАПТАЦІЯ ДЛЯ МОБІЛКИ (збереження твоєї ідеальної прокрутки) */
 @media (max-width: 768px) {
     .tariffs-scroll-wrapper {
-        padding: 20px 0 40px 15px !important;
-    }
-
-    .tariffs-container {
-        gap: 15px !important;
+        padding-left: 15px;
     }
 
     .tariff-card-glass {
-        width: 80vw !important;
-        min-width: 280px !important;
-        flex-shrink: 0 !important;
+        /* Твоя знайдена ідеальна ширина */
+        width: 75vw !important;
+        min-width: 270px;
+        padding: 35px 20px;
+        scroll-snap-align: start;
     }
 
-    .featured-emerald {
-        transform: scale(1) !important;
+    /* М'яка підказка скролу справа */
+    .tariffs-scroll-wrapper::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        background: linear-gradient(to left, var(--color-soft-cream), transparent);
+        pointer-events: none;
     }
 
     .nav-btn {
         display: none !important;
     }
 }
-
-/* --- END: TARIFF CARDS --- */

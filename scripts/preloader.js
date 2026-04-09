@@ -4,15 +4,20 @@ export async function initPreloader() {
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
 
+    // Перевіряємо, чи користувач вже бачив прелоадер у цій сесії
+    if (sessionStorage.getItem('preloaderShown')) {
+        preloader.style.display = 'none'; // Миттєво ховаємо
+        return;
+    }
+
     try {
-        // Шлях відносно кореня сайту
         const response = await fetch('pages/preloader.html');
         if (!response.ok) throw new Error("File not found");
 
         const html = await response.text();
         preloader.innerHTML = html;
 
-        // Логіка зникнення
+        // Встановлюємо 2 секунди (2000 мс) мінімального часу показу
         const minimumDisplayTime = 2000;
 
         const hideLoader = () => {
@@ -22,9 +27,13 @@ export async function initPreloader() {
 
             setTimeout(() => {
                 preloader.classList.add('loader-hidden');
+
+                // Помічаємо в сесії, що прелоадер вже був показаний
+                sessionStorage.setItem('preloaderShown', 'true');
+
                 setTimeout(() => {
                     preloader.style.display = 'none';
-                }, 800); // Час має збігатися з transition у CSS
+                }, 800);
             }, remainingTime);
         };
 
@@ -36,6 +45,6 @@ export async function initPreloader() {
 
     } catch (error) {
         console.warn("Preloader failed to load content:", error);
-        preloader.style.display = 'none'; // Ховаємо порожній дів у разі помилки
+        preloader.style.display = 'none';
     }
 }

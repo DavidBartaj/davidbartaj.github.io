@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="style.css">
 
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFE9S533Y3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Блокуємо збір даних до моменту згоди
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied'
+        });
+
+        gtag('config', 'G-SFE9S533Y3');
+    </script>
 
 </head>
 <body>
-
 
 
 <!--Start preloader-->
@@ -20,13 +32,11 @@
 <!--End preloader-->
 
 
-
 <!--Start header-->
 
 <div id="header-placeholder"></div>
 
 <!--End header-->
-
 
 
 <!--Start hero-->
@@ -100,7 +110,6 @@
 </section>
 
 <!--End hero-->
-
 
 
 <!-- Start advantages -->
@@ -272,7 +281,6 @@
 <!-- End advantages -->
 
 
-
 <!-- Start tariffs -->
 
 <section class="tariffs-light-section" id="tariffs-light-section">
@@ -395,7 +403,6 @@
 <!-- End tariffs-->
 
 
-
 <!-- Start coverage-->
 
 <section id="coverage" class="coverage-section">
@@ -414,7 +421,7 @@
             <div class="loc-card"><span>📍</span> с. Розтоки</div>
             <div class="loc-card"><span>📍</span> с. Верхнє Водяне</div>
             <div class="loc-card"><span>📍</span> с. Стримба</div>
-            <div class="loc-card"><span>📍</span> с. Плаюц</div>
+            <div class="loc-card"><span>📍</span> с. Плаюць</div>
             <div class="loc-card"><span>📍</span> с. Водиця</div>
         </div>
 
@@ -427,7 +434,6 @@
 </section>
 
 <!--End coverage-->
-
 
 
 <!--Start modal-->
@@ -520,13 +526,11 @@
 <!--End modal-->
 
 
-
 <!--Start footer-->
 
 <div id="footer-placeholder"></div>
 
 <!--End footer-->
-
 
 
 <!--Start pay btn-->
@@ -535,7 +539,22 @@
 
 <!--End pay btn-->
 
+<div id="cookie-overlay" class="cookie-overlay"></div>
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+        <p>Ми використовуємо файли cookie для покращення роботи сайту та аналізу трафіку за допомогою Google Analytics.
+            Це допомагає нам робити сервіс MicroTeam зручнішим для вас. Залишаючись на сайті, ви погоджуєтесь із
+            використанням цих технологій.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn-cookie accept">Прийняти</button>
+            <button id="cookie-decline" class="btn-cookie decline">Закрити</button>
+        </div>
+    </div>
+</div>
 
-<script type="module" src="script.js" ></script>
+
+<script type="module" src="script.js"></script>
+
+
 </body>
 </html>

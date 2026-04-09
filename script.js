@@ -6,6 +6,7 @@ import {initModal} from './scripts/modal.js';
 import {initHero} from './scripts/hero.js';
 import {initComponentsLoader} from './scripts/header_footer.js';
 import {initPreloader} from "./scripts/preloader.js";
+import {initCookieBanner} from "./scripts/cookie.js";
 
 
 
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
     initWorkTime();
+ initCookieBanner();
     initBurgerMenu();
     initTariffsScroll();
     initModal();

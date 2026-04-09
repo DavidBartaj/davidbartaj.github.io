@@ -8,6 +8,7 @@
 @import "styles/tariffs.css";
 @import "styles/location.css";
 @import "styles/preloader.css";
+@import "styles/cookie.css";
 
 /* 3. Компоненти та вікна */
 @import "styles/order_modal.css";

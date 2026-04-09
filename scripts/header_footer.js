@@ -31,9 +31,16 @@ export async function initComponentsLoader() {
                 html = html.replace(/href="#coverage"/g, 'href="../index.html#coverage"');
                 html = html.replace(/href="pages\/TV\.html"/g, 'href="TV.html"');
                 html = html.replace(/href="pages\/pay\.html"/g, 'href="pay.html"');
+                html = html.replace(/href="documents\/Oferta_MT\.docx"/g, 'href="../documents/Oferta_MT.docx"');
+                html = html.replace(/href="documents\/Oferta_D\.docx"/g, 'href="../documents/Oferta_D.docx"');
+                html = html.replace(/href="documents\/Oferta_O\.docx"/g, 'href="../documents/Oferta_O.docx"');
+                html = html.replace(/href="documents\/Protocol_vimiruvania_UDCR\.pdf"/g, 'href="../documents/Protocol_vimiruvania_UDCR.pdf"');
+                html = html.replace(/href="documents\/zayava_MT\.doc"/g, 'href="../documents/zayava_MT.doc"');
 
                 // 2. Виправляємо шляхи до зображень та іконок
-                html = html.replace(/src="img\//g, 'src="../img/');
+
+                html = html.replace(/src="img\/Logo_NewDesign\.png/g, 'src="../img/Logo_NewDesign.png');
+                html = html.replace(/src="assets\//g, 'src="../assets/');
                 html = html.replace(/src="assets\//g, 'src="../assets/');
             }
 
