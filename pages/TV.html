@@ -40,8 +40,11 @@
                 <div class="tv-card-v2">
                     <div class="tv-card-top">
                         <span class="tv-label">Мінімальна ціна</span>
-                        <h3>Базовий</h3>
-                        <div class="tv-main-info">263 <span>канали</span></div>
+                        <h3>UA:Ефір</h3>
+                        <div id="count-ua-efir" class="tv-main-info">263 <span class="count-label">канали</span></div>
+<!--                        <div class="tv-main-info">-->
+<!--                            Кількість каналів: <span id="count-ua-efir" class="channels-count-badge">0</span>-->
+<!--                        </div>-->
                     </div>
                     <div class="tv-card-price">119 <span>грн/міс</span></div>
                     <ul class="tv-list-features">
@@ -56,8 +59,11 @@
                 <div class="tv-card-v2 featured-tv-page">
                     <div class="tv-card-top">
                         <span class="tv-label primary">Популярний</span>
-                        <h3>Преміум</h3>
-                        <div class="tv-main-info">276 <span>каналів</span></div>
+                        <h3>VIP HD</h3>
+                        <div id="count-vip-hd" class="tv-main-info">276 <span class="count-label">каналів</span></div>
+<!--                        <div class="tv-main-info">-->
+<!--                            Кількість каналів: <span id="count-vip-hd" class="channels-count-badge">0</span>-->
+<!--                        </div>-->
                     </div>
                     <div class="tv-card-price">149 <span>грн/міс</span></div>
                     <ul class="tv-list-features">
@@ -72,8 +78,11 @@
                 <div class="tv-card-v2">
                     <div class="tv-card-top">
                         <span class="tv-label">Все одразу</span>
-                        <h3>Максимум</h3>
-                        <div class="tv-main-info">291 <span>канал</span></div>
+                        <h3>Преміум</h3>
+                        <div id="count-premium" class="tv-main-info">0 <span class="count-label">канал</span></div>
+<!--                        <div class="tv-main-info">-->
+<!--                            Кількість каналів: <span id="count-premium" class="channels-count-badge">0</span>-->
+<!--                        </div>-->
                     </div>
                     <div class="tv-card-price">189 <span>грн/міс</span></div>
                     <ul class="tv-list-features">
@@ -87,9 +96,8 @@
             </div>
         </div>
         <div class="tv-pdf-container">
-            <a href="list-channels.pdf" target="_blank" class="btn-pdf-download">
-                <span class="pdf-icon">📄</span>
-                Завантажити повний список каналів (.PDF)
+            <a href="channels.html" class="channels-list-btn" style="margin-top: 10px; display: block; text-align: center; text-decoration: none;">
+                Переглянути список каналів
             </a>
             <p class="pdf-note">* Перелік каналів може змінюватись залежно від технічних умов мовника</p>
         </div>
@@ -123,7 +131,7 @@
 
 <!--End modal-->
 
-
+<script src="../scripts/tv-tariffs.js"></script>
 <script type="module" src="../script.js"></script>
 
 </body>

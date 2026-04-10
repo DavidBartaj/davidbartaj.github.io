@@ -1,13 +1,11 @@
 /* --- TV PAGE STYLES --- */
 
-/* Головний фон сторінки ТБ */
 .tv-page {
     background: var(--color-soft-cream);
 }
 
-/* Верхній блок із заголовком (Hero) */
+/* Hero Section */
 .tv-hero {
-    background: transparent; /* Виглядає чистіше на кремовому фоні */
     padding: 80px 0 60px;
     text-align: center;
 }
@@ -26,12 +24,11 @@
     margin: 0 auto;
 }
 
-/* Секція зі списками тарифів */
 .tv-detailed-list {
     padding-bottom: 100px;
 }
 
-/* Сітка для трьох карток */
+/* Grid & Cards */
 .tv-grid-three {
     display: flex;
     justify-content: center;
@@ -42,10 +39,9 @@
     margin: 0 auto;
 }
 
-/* Базовий стиль картки */
 .tv-card-v2 {
     background: #ffffff;
-    border: 1px solid #a6824a33; /* Тонкий золотий контур */
+    border: 1px solid #a6824a33;
     border-radius: 24px;
     padding: 40px 30px;
     flex: 1 1 350px;
@@ -62,13 +58,12 @@
     box-shadow: 0 12px 30px rgba(166, 130, 74, 0.1);
 }
 
-/* Акцент на популярному пакеті */
 .featured-tv-page {
     border: 2px solid var(--color-antique-gold);
     box-shadow: 0 10px 40px rgba(166, 130, 74, 0.15);
 }
 
-/* Текстові елементи всередині картки */
+/* Labels & Titles */
 .tv-label {
     display: inline-block;
     padding: 6px 16px;
@@ -92,17 +87,12 @@
     margin-bottom: 10px;
 }
 
+/* Tariff Info & Price */
 .tv-main-info {
     font-size: 2.2rem;
     font-weight: 800;
     color: var(--color-emerald-green);
     margin-bottom: 20px;
-}
-
-.tv-main-info span {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #94a3b8;
 }
 
 .tv-card-price {
@@ -118,36 +108,73 @@
     color: #64748b;
 }
 
-/* Список характеристик */
+/* Features List */
 .tv-list-features li {
     font-size: 0.95rem;
     color: #475569;
     padding: 12px 0;
-    border-bottom: 1px solid var(--color-soft-cream);
-    position: relative;
-
-}
-.tv-list-features li::marker {
-   content: none;
- }
-
-/* Юридичні примітки */
-.tv-tech-note {
-    margin-top: 25px;
-    font-size: 0.7rem;
-    color: #cbd5e1;
-    border-top: 1px solid #f1f5f9;
-    padding-top: 15px;
+    border-top: 1px solid var(--color-soft-cream);
+    list-style: none;
 }
 
-/* Блок PDF завантаження */
+/* Channels Counter (Optimized) */
+.tariff-count-box {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: center !important;
+    margin-bottom: 20px !important;
+    min-height: 40px;
+}
+
+.channels-count-badge {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    color: var(--color-emerald-green) !important;
+    display: inline-block !important;
+    text-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    line-height: 1;
+}
+
+.count-label {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: #94a3b8 !important;
+    margin-left: 8px !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-transform: lowercase !important;
+}
+
+/* Buttons */
+.channels-list-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    color: var(--color-emerald-green);
+    border: 2px solid var(--color-emerald-green);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.channels-list-btn:hover {
+    background-color: var(--color-emerald-green);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* PDF & Tech Notes */
 .tv-pdf-container {
     text-align: center;
     margin: 60px auto 0;
     padding: 40px;
     max-width: 800px;
     background: #ffffff;
-    border: 2px dashed #a6824a66; /* Пунктир кольору Antique Gold */
+    border: 2px dashed #a6824a66;
     border-radius: 20px;
 }
 
@@ -162,14 +189,19 @@
     transition: 0.3s;
 }
 
-.btn-pdf-download:hover {
-    color: var(--color-antique-gold);
-    transform: scale(1.02);
+.btn-pdf-download:hover { color: var(--color-antique-gold); transform: scale(1.02); }
+
+.tv-tech-note {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #cbd5e1;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
 }
 
-/* --- MODAL STYLES --- */
+/* Modal */
 .modal {
-    background-color: #1e293bB3; /* 70% прозорості через HEX */
+    background-color: #1e293bB3;
     backdrop-filter: blur(5px);
 }
 
@@ -179,17 +211,10 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
-#orderForm input:focus, #orderForm select:focus {
-    border-color: var(--color-emerald-green);
-}
-
-/* Стиль кнопки замовлення в модалці (якщо є) */
 .modal-btn {
     background: var(--color-emerald-green);
     color: #fff;
     transition: 0.3s;
 }
 
-.modal-btn:hover {
-    background: var(--color-charcoal-black);
-}
+.modal-btn:hover { background: var(--color-charcoal-black); }
