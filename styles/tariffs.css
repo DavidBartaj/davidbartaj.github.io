@@ -96,6 +96,10 @@
     opacity: 0.6;
 }
 
+.featured-blue{
+    border: 2px solid var(--color-antique-gold);
+    box-shadow: 0 10px 40px rgba(166, 130, 74, 0.15);
+}
 .features-mini {
     list-style: none;
     padding: 0;
@@ -105,10 +109,13 @@
 }
 
 .features-mini li {
+
     font-size: 0.95rem;
-    color: var(--color-charcoal-black);
-    padding: 8px 0;
-    line-height: 1.4;
+    color: rgba(71, 85, 105, 0.8);
+    padding: 12px 0;
+    border-top: 1px solid var(--color-soft-cream);
+    position: relative;
+    text-align: center;
 }
 
 /* Кнопки */
@@ -189,11 +196,6 @@
     width: 100%;
 }
 
-.features-mini li {
-    font-size: 0.95rem;
-    color: var(--color-charcoal-black);
-    position: relative;
-}
 
 /* НАВІГАЦІЙНІ КНОПКИ (Стрілки як на схемі) */
 .nav-btn {

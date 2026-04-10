@@ -13,7 +13,7 @@ export function initModal() {
         ) {
             e.preventDefault(); // Зупиняємо перехід по посиланню
             if (modal) {
-                modal.style.display = "block";
+                modal.style.display = "flex";
                 document.body.classList.add('no-scroll');
             }
         }
